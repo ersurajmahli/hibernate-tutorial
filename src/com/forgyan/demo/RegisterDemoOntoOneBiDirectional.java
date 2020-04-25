@@ -4,8 +4,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.forgyan.entity.PrimaryDetails;
 import com.forgyan.entity.Register;
+import com.forgyan.entity.onetoone.PrimaryDetails;
 
 public class RegisterDemoOntoOneBiDirectional {
 

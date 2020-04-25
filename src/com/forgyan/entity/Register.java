@@ -15,6 +15,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.forgyan.entity.manytoone.AddressDetails;
+import com.forgyan.entity.onetoone.PrimaryDetails;
+
 @Entity
 @Table(name="t_register")
 public class Register {

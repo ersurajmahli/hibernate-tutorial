@@ -1,17 +1,15 @@
 package com.forgyan.demo;
 
-import java.lang.Thread.State;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.forgyan.entity.AddressDetails;
 import com.forgyan.entity.Degree;
-import com.forgyan.entity.PrimaryDetails;
 import com.forgyan.entity.Register;
+import com.forgyan.entity.manytoone.AddressDetails;
+import com.forgyan.entity.onetoone.PrimaryDetails;
 
-public class OneToMantBiDirectionalDemo {
+public class OneToManyUniDirectionalDemo {
 
 	public static void main(String[] args) {
 		
@@ -26,7 +24,7 @@ public class OneToMantBiDirectionalDemo {
 		
 		// create a session
 		Session session = factory.getCurrentSession();
-		delete(factory, session);
+		save(factory, session);
 
 	}
 	

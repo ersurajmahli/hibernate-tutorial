@@ -4,9 +4,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.forgyan.entity.AddressDetails;
-import com.forgyan.entity.PrimaryDetails;
+import com.forgyan.entity.Degree;
 import com.forgyan.entity.Register;
+import com.forgyan.entity.manytoone.AddressDetails;
+import com.forgyan.entity.onetoone.PrimaryDetails;
 
 public class RegisterDemoOntoOne {
 
@@ -18,6 +19,7 @@ public class RegisterDemoOntoOne {
 										.addAnnotatedClass(Register.class)
 										.addAnnotatedClass(PrimaryDetails.class)
 										.addAnnotatedClass(AddressDetails.class)
+										.addAnnotatedClass(Degree.class)
 										.buildSessionFactory();
 		
 		// create a session

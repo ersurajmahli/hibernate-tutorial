@@ -1,15 +1,16 @@
-package com.forgyan.entity;
+package com.forgyan.entity.manytoone;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.forgyan.entity.Register;
 
 @Entity
 @Table(name="t_address_detail")

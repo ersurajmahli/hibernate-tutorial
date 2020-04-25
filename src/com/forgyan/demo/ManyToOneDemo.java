@@ -5,11 +5,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
-import com.forgyan.entity.AddressDetails;
-import com.forgyan.entity.PrimaryDetails;
+import com.forgyan.entity.Degree;
 import com.forgyan.entity.Register;
+import com.forgyan.entity.manytoone.AddressDetails;
+import com.forgyan.entity.onetoone.PrimaryDetails;
 
-public class RegisterDemonManyToOne {
+public class ManyToOneDemo {
 	
 	public static void main(String[] args) {
 		
@@ -19,6 +20,7 @@ public class RegisterDemonManyToOne {
 										.addAnnotatedClass(Register.class)
 										.addAnnotatedClass(PrimaryDetails.class)
 										.addAnnotatedClass(AddressDetails.class)
+										.addAnnotatedClass(Degree.class)
 										.buildSessionFactory();
 		
 		// create a session
@@ -31,18 +33,14 @@ public class RegisterDemonManyToOne {
 			
 			AddressDetails address = new AddressDetails("HN 46, Opa", "Lohardaga", "Jharkhand", "835213", "06526-456001", "06526-456001", "Y");
 			AddressDetails address1 = new AddressDetails("HN 47, Opawa", "Lohardaga", "Jharkhand", "835213", "06526-456001", "06526-456001", "Y");
-			
-			//Register register = new Register("Munshi", "Mahli", "munshi.mahli@gmail.com", "$$9090mN");
 		
-			
-			// System.out.println("Reg :"+obj);
 			session.beginTransaction();
 			 
 			Register register = session.get(Register.class, 19);
 			
 			register.add(address);
 			register.add(address1);
-			//register.add(address);
+			
 			session.save(address);
 			session.save(address1);
 			

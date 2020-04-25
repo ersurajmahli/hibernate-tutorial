@@ -1,4 +1,4 @@
-package com.forgyan.entity;
+package com.forgyan.entity.onetoone;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.forgyan.entity.Register;
 
 @Entity
 @Table(name="t_primary_details")
